@@ -11,5 +11,4 @@ formFinanzas.addEventListener('submit', function(event) {
     document.getElementById('resultado').textContent = "Gastos necesarios: " + gastosNece;
     document.getElementById('resultado2').textContent = "Gastos deseados: " + gastosDese;
     document.getElementById('resultado3').textContent = "Ahorro: " + ahorro;
-
 });
