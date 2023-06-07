@@ -61,16 +61,22 @@ let datos = [
     },
 ]
 
-let perdida = 0;
-let ganancia = 0;
+function flujoDeCaja(datos) {
+    let perdida = 0;
+    let ganancia = 0;
 
-for (let i = 0; i < datos.length; i++) {
-    perdida += datos[i].egreso;
-    ganancia += datos[i].ingreso;
+    for (let i = 0; i < datos.length; i++) {
+        perdida += datos[i].egreso;
+        ganancia += datos[i].ingreso;
+    }
+
+    if (ganancia > perdida) {
+        return 1;
+    } else if (ganancia == perdida) {
+        return 0;
+    }else{
+        return -1;
+    }
 }
 
-if (ganancia > perdida) {
-    console.log("El año fue positivo y la ganancia fue de: " + (ganancia - perdida) + "$");
-} else {
-    console.log("El año fue negativo y la perdida fue de: " + (perdida - ganancia) + "$");
-}
+console.log(flujoDeCaja(datos));

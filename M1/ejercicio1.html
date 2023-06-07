@@ -8,15 +8,16 @@
     <title>CV</title>
 </head>
 <body>
-    <form id="form">
-        <input type="number" id="costos-fijos"><h3>Ingresar costos-fijos</h3>
-        <input type="number" id="precio-venta"><h3>Ingresar precio de venta</h3>
-        <input type="number" id="costos-variables"><h3>Ingresar costos variables</h3>
-        <button type="submit">Enviar</button>
-        <button type="reset">Resetear</button>
-        <h1 id="resultado"></h1>
-    </form>
-    
+    <div class="div">
+        <form id="form">
+            <h3>Ingresar costos-fijos:</h3><input type="number" id="costos-fijos">
+            <h3>Ingresar precio de venta</h3><input type="number" id="precio-venta">
+            <h3>Ingresar costos variables</h3><input type="number" id="costos-variables">
+            <button type="submit">Enviar</button>
+            <button type="reset">Resetear</button>
+            <h3 id="resultado"></h3>
+        </form>
+    </div>
     <script src="ejercicio1.js"></script>
 </body>
 </html>

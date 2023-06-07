@@ -19,19 +19,13 @@ let datos = [
     }   
 ]
 
-let informacion = [];
-
-datos.forEach((oferta) => {
-    let interes = (oferta.capital * oferta.plazo * oferta.tasa)/100;
-    informacion.push({
-        "nombre": oferta.nombre,
-        "capital": oferta.capital,
-        "plazo": oferta.plazo,
-        "tasa": oferta.tasa,
-        "interes": interes
-    });
-});
-
-for(let i = 0; i < informacion.length; i++) {
-    console.log(informacion[i]);
+function agregarIntereses(datos){
+    for (let i = 0; i < datos.length; i++) {
+        datos[i].intereses = (datos[i].capital * datos[i].tasa * datos[i].plazo)/100;
+    }
+    return datos;
 }
+
+datos = agregarIntereses(datos);
+console.log(datos);
+
